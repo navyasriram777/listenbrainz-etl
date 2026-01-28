@@ -2,8 +2,8 @@
 
 #### Install Visual Studio/ other IDE
 
--git clone https://github.com/navyasriram777/listenbrainz-etl.git
--cd listenbrainz-etl
+- git clone https://github.com/navyasriram777/listenbrainz-etl.git
+- cd listenbrainz-etl
 
 #### Create a Python Virtual Environment named venv
 
@@ -20,7 +20,7 @@
 #### In the Visual Studio : Windows Activate
 In Visual Studio Right click on listenbrainz-etl
 choose option : Open In Integrated Terminal then run cmd :
- .\venv\Scripts\Activate.ps1
+ - .\venv\Scripts\Activate.ps1
 
 #### Install Dependencies
 - pip install -r requirements.txt
