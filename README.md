@@ -26,9 +26,9 @@ choose option : Open In Integrated Terminal then run cmd :
 - pip install -r requirements.txt
 
 #### Add Input JSON Files in DATA FOLDER  
-- data/listens_spotify.json : Download the dataset from given link of Google Drive folder: Test Assignment dataset
+- data/listens_spotify.json : Download the dataset from given link [of Google Drive folder: Test Assignment dataset](https://drive.google.com/drive/folders/1wnAXYL4BtchW6J8C8YaqOOo9ba6NFOva?usp=sharing)
 - data/sample.json : This file has 5 duplicate records and 5 new records , this file is added to test idempotent features like 
-    Already Ingested Data
+    Already Ingested Data,
     Duplicate Data
 
 #### Run the Project in the below path
