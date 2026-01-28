@@ -1,8 +1,8 @@
 ## Setup Instructions
 
-## Install Visual Studio or any other sutiable IDE
+# Install Visual Studio or any other sutiable IDE
 
-## Clone the Repository from GitHub
+#Clone the Repository from GitHub
 My Github repo : https://github.com/navyasriram777/listenbrainz-etl.git
 
 git clone https://github.com/<your-username>/listenbrainz-etl.git
