@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+
+#Large Files
+listenbrainz.db
+*.json
+*.csv
+
+# IDEs
+.vscode/
+.idea/
