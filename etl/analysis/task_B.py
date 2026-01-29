@@ -10,7 +10,6 @@ class TaskB_Analysis:
         # Assign only runtime parameters from config
         self.user_topn_days_param = cfg.get("user_topn_days_param")
 
-
     def user_topn_days(self,n):
         file_name=f"""C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/taskB/user_top{n}_days.csv"""
         user_topn_days_query=f"""

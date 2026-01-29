@@ -13,12 +13,6 @@ class TaskA_Analysis:
         self.on_date_param = cfg.get("on_date_param")
         self.user_nth_song_param = cfg.get("user_nth_song")
     
-    
-    
-    
-
-
-    
     def top_n_user(self,n):
         file_name=f"""C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/taskA/top_{n}_user.csv"""
         top_n_user_query=f"""
@@ -60,6 +54,3 @@ class TaskA_Analysis:
         self.top_n_user(self.top_n_user_param)
         self.user_count_for_date(self.on_date_param)
         self.user_nth_song(self.user_nth_song_param)
-
-
-

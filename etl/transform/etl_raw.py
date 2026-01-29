@@ -6,7 +6,6 @@ class RawETL:
     def __init__(self):
         self.conn = db.db_open()
 
-    
     # Drop Table if exits
     def _drop_tables(self): 
         self.conn.execute(""" DROP TABLE IF EXISTS raw_music_data""")
@@ -97,7 +96,6 @@ class RawETL:
         count_val=self.conn.execute("SELECT count(*) AS total_rows from raw_music_data;").fetchdf()
         print(f"[INFO] Total Number of Records in RAW TABLE are: {count_val['total_rows'][0]}")
     
-
     #Run Raw  Layer process 
     def run_raw_process(self):
         self._drop_tables()
