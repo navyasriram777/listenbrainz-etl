@@ -11,6 +11,7 @@
 - Download from [git-scm.com](https://git-scm.com/install/)
 
 ### VS Code installed
+- [Download](https://code.visualstudio.com/download)
 - Install Python extension in VS Code
 
 ## Setup Instructions
@@ -53,12 +54,12 @@ choose option : Open In Integrated Terminal then run cmd :
     Already Ingested Data,
     Duplicate Data
 
+#### Config Files
+- Runtime parameters are provided respective config files
+
 #### Run the Project in the below path
 - (venv) PS C:\Users\Public\ScalableCapital\listenbrainz-etl> python .\etl\main.py
 
-
-### Config Files
-- Runtime parameters are provided respective config files
-### OUTPUT folder
+#### OUTPUT folder
 - Output files has been stored for transformation & analysis tasks results
 - `Note`:  for user_count_for_date function of TASK A : output is displayed on screen , since outputis single value file is not created 
