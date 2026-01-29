@@ -11,7 +11,7 @@
 - Download from [git-scm.com](https://git-scm.com/install/)
 
 ### VS Code installed
-- [Download](https://code.visualstudio.com/download)
+- Download from [Visualstudio.com](https://code.visualstudio.com/download)
 - Install Python extension in VS Code
 
 ## Setup Instructions
