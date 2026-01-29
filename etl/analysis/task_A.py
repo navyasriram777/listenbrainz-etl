@@ -1,8 +1,9 @@
 from db_connection import db
 import json
+import os
 
 class TaskA_Analysis:
-    def __init__(self,config_file="C:/Users/Public/ScalableCapital/listenbrainz-etl/config/taskA.json"):
+    def __init__(self,config_file="./config/taskA.json"):
         # Reuse DB connection
         self.conn = db.db_open()
         with open(config_file,'r') as f:
@@ -14,7 +15,9 @@ class TaskA_Analysis:
         self.user_nth_song_param = cfg.get("user_nth_song")
     
     def top_n_user(self,n):
-        file_name=f"""C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/taskA/top_{n}_user.csv"""
+        file_name=f"""./etl/output/taskA/top_{n}_user.csv"""
+        output_dir=os.path.dirname(file_name)
+        os.makedirs(output_dir,exist_ok=True)
         top_n_user_query=f"""
                             select user_name,count(release_msid) as listen_times
                             from curated_music_data where release_msid!='UNKNOWN' group by user_name
@@ -36,7 +39,9 @@ class TaskA_Analysis:
 
 
     def user_nth_song(self,n):
-        file_name=f"""C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/taskA/user_{n}th_song.csv"""
+        file_name=f"""./etl/output/taskA/user_{n}th_song.csv"""
+        output_dir=os.path.dirname(file_name)
+        os.makedirs(output_dir,exist_ok=True)
         user_nth_song_query=f"""
         with user_nth_song_cte AS
         (

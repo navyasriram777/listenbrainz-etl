@@ -1,4 +1,5 @@
 import duckdb
+import os
 import pandas as pd
 from db_connection import db
 
@@ -69,7 +70,9 @@ class CuratedETL:
         print(f"[INFO] Total rows in curated table: {df['total_rows'][0]}")
         
     #Export curated table to CSV.   
-    def _export_to_csv(self, output_file="C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/curated_output.csv"):
+    def _export_to_csv(self, output_file="./etl/output/curated/curated_output.csv"):
+        output_dir=os.path.dirname(output_file)
+        os.makedirs(output_dir,exist_ok=True)
         df = self.conn.execute("SELECT * FROM curated_music_data").fetchdf()
         df.to_csv(output_file, index=False)
         print(f"[INFO] Curated data exported to {output_file}")

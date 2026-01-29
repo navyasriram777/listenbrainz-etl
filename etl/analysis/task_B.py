@@ -1,7 +1,8 @@
 import json
+import os
 from db_connection import db
 class TaskB_Analysis:
-    def __init__(self,config_file="C:/Users/Public/ScalableCapital/listenbrainz-etl/config/taskB.json"):
+    def __init__(self,config_file="./config/taskB.json"):
         # Reuse DB connection
         self.conn = db.db_open()
         with open(config_file,'r') as f:
@@ -11,7 +12,9 @@ class TaskB_Analysis:
         self.user_topn_days_param = cfg.get("user_topn_days_param")
 
     def user_topn_days(self,n):
-        file_name=f"""C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/taskB/user_top{n}_days.csv"""
+        file_name=f"""./etl/output/taskB/user_top{n}_days.csv"""
+        output_dir=os.path.dirname(file_name)
+        os.makedirs(output_dir,exist_ok=True)
         user_topn_days_query=f"""
         with user_day_listen_count as
         (

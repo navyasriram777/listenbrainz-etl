@@ -9,7 +9,9 @@ env/
 
 #Large Files
 listenbrainz.db
-*.json
+listens_spotify.json
+sample.json
+test.json
 *.csv
 
 # IDEs

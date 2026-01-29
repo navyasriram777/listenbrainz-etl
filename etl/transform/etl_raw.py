@@ -43,9 +43,9 @@ class RawETL:
         INSERT INTO raw_music_data
         SELECT
             track_metadata,
-            listened_at::BIGINT,
-            recording_msid::VARCHAR,
-            user_name::VARCHAR,
+            listened_at,
+            recording_msid,
+            user_name,
             {load_id} AS load_id,
             CURRENT_DATE AS load_date,
             CURRENT_TIMESTAMP AS load_ts
@@ -101,13 +101,13 @@ class RawETL:
         self._drop_tables()
         self._create_tables()
         # Single file
-        self._ingest_file('C:/Users/Public/ScalableCapital/listenbrainz-etl/data/listens_spotify.json')
+        self._ingest_file('./data/listens_spotify.json')
 
         # Multiple files
         files = [
-        'C:/Users/Public/ScalableCapital/listenbrainz-etl/data/sample.json',
-        'C:/Users/Public/ScalableCapital/listenbrainz-etl/data/sample.json',
-        'C:/Users/Public/ScalableCapital/listenbrainz-etl/data/test1.json'
+        './data/sample.json',
+        './data/test.json',
+        './data/test1.json'
              ]
         
         self._ingest_files(files)

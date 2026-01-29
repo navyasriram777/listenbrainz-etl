@@ -1,3 +1,4 @@
+from db_connection import DuckDBConnection,db
 from transform.etl_raw import RawETL
 from transform.etl_curated import CuratedETL
 from analysis.task_A import TaskA_Analysis
@@ -6,6 +7,8 @@ from analysis.task_C import TaskC_Analysis
 
 
 if __name__ == "__main__":
+    print("\n------------------------- OPEN : DATABASE ------------------------------")
+    db.db_open()
     print("\n------------------------- RAW LAYER : PROCESSING ------------------------------")
     raw = RawETL()
     raw.run_raw_process()
@@ -21,3 +24,5 @@ if __name__ == "__main__":
     print("\n-------------------------TAKS C : ANALYSIS------------------------------")
     task_c =TaskC_Analysis()
     task_c.run_task_C()
+    print("\n------------------------- CLOSE : DATABASE ------------------------------")
+    db.db_close()

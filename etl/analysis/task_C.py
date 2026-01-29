@@ -1,11 +1,14 @@
 from db_connection import db
+import os
 class TaskC_Analysis:
     def __init__(self):
         # Reuse DB connection
         self.conn = db.db_open()
 
     def active_users(self):
-        file_name='C:/Users/Public/ScalableCapital/listenbrainz-etl/etl/output/taskC/active_users.csv'
+        file_name='./etl/output/taskC/active_users.csv'
+        output_dir=os.path.dirname(file_name)
+        os.makedirs(output_dir,exist_ok=True)
 
         active_users_query=""" 
         with usercount_per_day AS
