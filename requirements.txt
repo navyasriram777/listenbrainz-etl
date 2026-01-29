@@ -1,3 +1,2 @@
 duckdb==1.4.3
-python==3.11.9
 pandas==3.0.0
