@@ -17,7 +17,7 @@
 ## Setup Instructions
 
 #### Clone the Repo 
-
+- Create a HighLevel folder as ScalableCapital, Inside that clone 
 - git clone https://github.com/navyasriram777/listenbrainz-etl.git
 - cd listenbrainz-etl
 
@@ -48,7 +48,7 @@ choose option : Open In Integrated Terminal then run cmd :
 - pip install -r requirements.txt
 - List all the installed packages  : pip list
 
-#### Add Input JSON Files in DATA FOLDER : listenbrainz-etl\data
+#### Add Input JSON Files in DATA FOLDER : ScalableCapital\listenbrainz-etl\data
 - data/listens_spotify.json : Download the dataset from given link [of Google Drive folder: Test Assignment dataset](https://drive.google.com/drive/folders/1wnAXYL4BtchW6J8C8YaqOOo9ba6NFOva?usp=sharing)
 - data/sample.json : This file has 5 duplicate records and 5 new records , this file is added to test idempotent features like 
     Already Ingested Data,
